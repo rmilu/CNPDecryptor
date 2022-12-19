@@ -90,7 +90,7 @@ public class Main {
         return dateOfBirth.substring(6,8) + "-" + dateOfBirth.substring(4,6) + "-" + dateOfBirth.substring(0,4);
     }
 
-    // TODO: Scrieti o metoda care, pe baza stringului de tip dd-MM-yyyy obtinut, sa returneze varsta persoanei ca un int
+    // Scrieti o metoda care, pe baza stringului de tip dd-MM-yyyy obtinut, sa returneze varsta persoanei ca un int
     public static int getAgeFromBirthDate(String dateOfBirth) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate dob = LocalDate.parse(dateOfBirth, formatter);
@@ -100,10 +100,7 @@ public class Main {
         return age;
     }
 
-    /** TODO: Scrieti o metoda care sa verifice judetul in care persoana s-a nascut folosind caracterele aflate pe pozitia 7-8
-     *  EXEMPLU: In cazul unei persoane cu CNP-ul 295060708XXXX caracterele care va intereseaza sunt '08'
-     * Daca verificati linkul de mai sus, o sa vedeti in sectiunea 'Structura' la 'JJ' numarul 08 este rezervat pentru Brasov
-     * Retrunati un String cu numele judetului i.e "Brasov"
+    /** Scrieti o metoda care sa verifice judetul in care persoana s-a nascut folosind caracterele aflate pe pozitia 7-8
      */
     public static String getCounty(String countyNumbers) {
         String county = "";
